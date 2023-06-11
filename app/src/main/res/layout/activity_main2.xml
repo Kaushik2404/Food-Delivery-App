@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity2"
+    android:background="#EFD7C7">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/okstall"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center_horizontal"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.5"
+        android:shadowColor="#635E5E"
+        android:textSize="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fast Food Delivery"
+        android:layout_gravity="center_horizontal"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="2"
+        android:shadowColor="@color/black"
+        android:textColor="@color/black"
+        android:textSize="40dp"
+        />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btngoogle"
+        android:layout_marginTop="40dp"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="19dp"
+        android:id="@+id/mainlogin"
+        />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btnmain"
+        android:layout_marginTop="10dp"
+        android:text="Create an account"
+        android:textAllCaps="false"
+        android:textSize="19dp"
+        android:id="@+id/maisnsignup"
+        />
+
+
+
+
+</LinearLayout>

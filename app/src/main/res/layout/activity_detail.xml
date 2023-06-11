@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Detail"
+    android:orientation="vertical"
+    android:background="@color/backok">
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--android:id="@+id/pricetv"-->
+<!--        android:textSize="20dp"-->
+
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/quntv"-->
+<!--        android:textSize="20dp"-->
+
+<!--        />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/totaltv"-->
+<!--        android:textSize="20dp"-->
+
+<!--        />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="My Cart"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#FF9800"
+        android:shadowColor="#C69F5F"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="2"
+        android:fontFamily="sans-serif-condensed"
+        />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="16dp"
+        >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/cartimage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:srcCompat="@drawable/okokburgwr" />
+
+            <TextView
+                android:id="@+id/cartname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="sans-serif-condensed"
+                android:shadowColor="#BC000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="Chisse Burger"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintStart_toEndOf="@+id/cartimage"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/cartadd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toEndOf="@+id/cartqun"
+                app:layout_constraintTop_toBottomOf="@+id/cartname"
+                app:srcCompat="@drawable/ic_baseline_add_circle_outline_24" />
+
+            <ImageView
+                android:id="@+id/cartremove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toEndOf="@+id/cartimage"
+                app:layout_constraintTop_toBottomOf="@+id/cartname"
+                app:srcCompat="@drawable/ic_baseline_remove_circle_outline_24" />
+
+            <TextView
+                android:id="@+id/cartqun"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="15dp"
+                android:text="10"
+                android:textSize="25dp"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/black"
+                android:shadowColor="#BC000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                app:layout_constraintStart_toEndOf="@+id/cartremove"
+                app:layout_constraintTop_toBottomOf="@+id/cartname" />
+
+            <TextView
+                android:id="@+id/cartprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed"
+                android:shadowColor="#BC000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="240"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toEndOf="@+id/cartname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/carttotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="15dp"
+                android:fontFamily="sans-serif-condensed"
+                android:shadowColor="#BC000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="240"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.987"
+                app:layout_constraintStart_toEndOf="@+id/cartname"
+                app:layout_constraintTop_toBottomOf="@+id/cartprice" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:shadowColor="#BC000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="Rs : "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/cartprice"
+                app:layout_constraintHorizontal_bias="0.816"
+                app:layout_constraintStart_toEndOf="@+id/cartname"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="sans-serif-condensed"
+                android:shadowColor="#BC000000"
+                android:shadowDx="1.5"
+                android:shadowDy="1.3"
+                android:shadowRadius="2"
+                android:text="To : "
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                app:layout_constraintEnd_toStartOf="@+id/carttotal"
+                app:layout_constraintHorizontal_bias="0.833"
+                app:layout_constraintStart_toEndOf="@+id/cartname"
+                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            >-->
+<!--            <ImageView-->
+<!--                android:layout_width="100dp"-->
+<!--                android:layout_height="150dp"-->
+<!--                android:src="@drawable/okokburgwr"-->
+<!--                android:layout_marginLeft="10dp"-->
+<!--                android:id="@+id/cartimage"-->
+<!--                />-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                >-->
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Chees Burger"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:layout_marginLeft="20dp"-->
+<!--                    android:id="@+id/cartname"-->
+<!--                    android:fontFamily="sans-serif-condensed"-->
+<!--                    android:shadowColor="#94000000"-->
+<!--                    android:shadowDx="1.5"-->
+<!--                    android:shadowDy="1.3"-->
+<!--                    android:shadowRadius="2"-->
+<!--                    />-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="150dp"-->
+<!--                    android:layout_height="40dp"-->
+<!--                    android:background="@drawable/lin2"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:layout_marginLeft="15dp">-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="40dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:paddingLeft="15dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/cartremove"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:src="@drawable/remove" />-->
+
+<!--                        </LinearLayout>-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="40dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_gravity="center"-->
+<!--                            android:layout_marginLeft="10dp"-->
+<!--                            android:background="@drawable/lin_mid"-->
+
+<!--                            >-->
+
+<!--                            <TextView-->
+<!--                                android:id="@+id/cartitemcount"-->
+<!--                                android:layout_width="match_parent"-->
+<!--                                android:layout_height="match_parent"-->
+<!--                                android:shadowColor="#000000"-->
+<!--                                android:shadowDx="1.5"-->
+<!--                                android:shadowDy="1.3"-->
+<!--                                android:shadowRadius="2"-->
+<!--                                android:text="10"-->
+<!--                                android:layout_marginTop="5dp"-->
+<!--                                android:textAlignment="center"-->
+<!--                                android:textSize="20dp"-->
+<!--                                android:textColor="@color/black"-->
+<!--                                android:fontFamily="sans-serif-condensed"-->
+<!--                                />-->
+
+<!--                        </LinearLayout>-->
+
+
+<!--                    </LinearLayout>-->
+
+<!--                    <LinearLayout-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="40dp">-->
+
+<!--                        <LinearLayout-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_marginLeft="10dp">-->
+
+<!--                            <ImageView-->
+<!--                                android:id="@+id/cartadd"-->
+<!--                                android:layout_width="wrap_content"-->
+<!--                                android:layout_height="wrap_content"-->
+<!--                                android:src="@drawable/add" />-->
+<!--                        </LinearLayout>-->
+
+<!--                    </LinearLayout>-->
+<!--                </LinearLayout>-->
+
+
+
+<!--            </LinearLayout>-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--               android:orientation="vertical">-->
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginLeft="10dp"-->
+<!--                    android:layout_gravity="center_horizontal">-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Rs. "-->
+
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:layout_marginTop="40dp"-->
+<!--                        android:fontFamily="sans-serif-condensed"-->
+<!--                        android:shadowColor="#BA000000"-->
+<!--                        android:shadowDx="1.5"-->
+<!--                        android:shadowDy="1.3"-->
+<!--                        android:shadowRadius="2"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="240"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:textStyle="bold"-->
+<!--                    android:textSize="20dp"-->
+<!--                    android:layout_marginTop="40dp"-->
+<!--                    android:id="@+id/cartprice"-->
+<!--                        android:fontFamily="sans-serif-condensed"-->
+<!--                        android:shadowColor="#97000000"-->
+<!--                        android:shadowDx="1.5"-->
+<!--                        android:shadowDy="1.3"-->
+<!--                        android:shadowRadius="2"-->
+
+<!--                    />-->
+<!--                </LinearLayout>-->
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_gravity="center_horizontal"-->
+<!--                    android:layout_marginLeft="10dp">-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:fontFamily="sans-serif-condensed"-->
+<!--                        android:text="To. "-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:shadowColor="#85000000"-->
+<!--                        android:shadowDx="1.5"-->
+<!--                        android:shadowDy="1.3"-->
+<!--                        android:shadowRadius="2"/>-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/carttotal"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:fontFamily="sans-serif-condensed"-->
+<!--                        android:text="2400"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="20dp"-->
+<!--                        android:textStyle="bold"-->
+<!--                        android:shadowColor="#8D000000"-->
+<!--                        android:shadowDx="1.5"-->
+<!--                        android:shadowDy="1.3"-->
+<!--                        android:shadowRadius="2"-->
+
+<!--                        />-->
+<!--                </LinearLayout>-->
+
+<!--            </LinearLayout>-->
+
+
+<!--        </LinearLayout>-->
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="8dp"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="16dp"
+        >
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+          <LinearLayout
+              android:layout_marginTop="20dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginRight="20dp"
+              android:layout_marginLeft="20dp"
+              >
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Total Price :"
+                  android:layout_weight="1"
+                  android:textSize="20dp"
+                  android:fontFamily="sans-serif-condensed"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif-condensed"
+                  android:text="Rs : "
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+
+              <TextView
+                  android:id="@+id/billtotal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif-condensed"
+                  android:text="2400"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+
+          </LinearLayout>
+          <LinearLayout
+             android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginRight="20dp"
+              android:layout_marginLeft="20dp"
+              >
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif-condensed"
+                  android:text="Tax (10%):"
+                  android:layout_weight="1"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif-condensed"
+                  android:text="Rs : "
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+
+              <TextView
+                  android:id="@+id/tax"
+                  android:layout_width="wrap_content"
+                  android:fontFamily="sans-serif-condensed"
+                  android:layout_height="wrap_content"
+                  android:text="2400"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+
+          </LinearLayout>
+          <LinearLayout
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginRight="20dp"
+              android:layout_marginLeft="20dp"
+              >
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Delivery Services :"
+                  android:fontFamily="sans-serif-condensed"
+                  android:layout_weight="1"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+              <TextView
+
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:fontFamily="sans-serif-condensed"
+                  android:text="Rs : "
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+
+              <TextView
+                  android:id="@+id/servisetax"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="2400"
+                  android:fontFamily="sans-serif-condensed"
+                  android:textSize="20dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+
+          </LinearLayout>
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="--------------------------------------------------------"
+              android:layout_gravity="center_horizontal"
+              android:layout_marginTop="10dp"
+              />
+          <LinearLayout
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="horizontal"
+              android:layout_marginRight="20dp"
+              android:layout_marginLeft="20dp"
+              android:layout_marginBottom="20dp"
+              >
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Total :"
+                  android:fontFamily="sans-serif-condensed"
+                  android:layout_weight="1"
+                  android:textSize="30dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  android:textStyle="bold"
+                  />
+
+              <TextView
+                  android:textStyle="bold"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Rs : "
+                  android:fontFamily="sans-serif-condensed"
+                  android:textSize="30dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  />
+              <TextView
+                  android:id="@+id/finaltotal"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="2400"
+                  android:fontFamily="sans-serif-condensed"
+                  android:textSize="30dp"
+                  android:textColor="@color/black"
+                  android:shadowColor="#BC000000"
+                  android:shadowDx="1.5"
+                  android:shadowDy="1.3"
+                  android:shadowRadius="2"
+                  android:textStyle="bold"
+
+                  />
+
+          </LinearLayout>
+
+
+      </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btnback"
+        android:layout_marginTop="30dp"
+        android:text="Order Now"
+        android:shadowColor="#000000"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="2"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:textSize="25dp"
+        android:id="@+id/orderok"/>
+</LinearLayout>

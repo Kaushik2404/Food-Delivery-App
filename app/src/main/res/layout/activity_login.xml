@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Login"
+    android:background="@drawable/foodappback">
+<!--    <ProgressBar-->
+<!--        android:id="@+id/progressbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="550dp"-->
+<!--        />-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:fontFamily="sans-serif-condensed"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="2"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:id="@+id/tv"
+
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edtback"
+        android:layout_marginTop="30dp"
+        android:hint="Your Email"
+        android:textSize="15dp"
+        android:textColorHint="#BC000000"
+        android:padding="15dp"
+        android:id="@+id/Lemail"
+
+        />
+
+    <EditText
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/edtback"
+        android:layout_marginTop="10dp"
+        android:hint="password"
+        android:textColorHint="#A9000000"
+        android:textSize="15dp"
+        android:padding="15dp"
+        android:id="@+id/Lpassword"
+
+        />
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btnback"
+        android:layout_marginTop="30dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:textSize="20dp"
+        android:id="@+id/login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forget your password?"
+        android:textColor="#CDFFFFFF"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="2"
+        android:shadowColor="@color/white"
+        android:id="@+id/forgetpass"/>
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btnfb"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Login with facebook"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="70dp"
+        android:id="@+id/fblogin"
+
+        />
+
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:background="@drawable/btngoogle"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Login with Google"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:id="@+id/googlelogin"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Don't have an Account? Sign up"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:textColor="@color/white"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="2"
+        android:shadowColor="@color/white"
+        android:id="@+id/signup"/>
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>
